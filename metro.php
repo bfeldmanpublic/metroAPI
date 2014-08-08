@@ -38,11 +38,12 @@ foreach ($decoded["Trains"] as $train)
     		$message = "The next Orange Line train will arrive at Ballston in ".$min." MINUTES. It's headed for ".$destName.".";
     	}
 
+        //We only need the next arriving train, so break out of loop after 1 is found.
     	break;
     }
 };
 
-//Outputs message with line break for command line
+//Outputs message with line break for command line readability.
 echo $message."\n";
 
 ?>
