@@ -9,15 +9,14 @@ $stationCode = "K04";
 // API Key for WMATA 
 $apiKey = "kfgpmgvfgacx98de9q3xazww";
 
-//Rail line code you are looking for; currently set for Orange line.
-$lineCode = "OR";
-
 $getURL = $apiURL.$stationCode."?api_key=".$apiKey;
 
-//Get json response
 $json = file_get_contents($getURL);
 
 $decoded = json_decode($json, true);
+
+//Rail line code you are looking for; currently set for Orange line.
+$lineCode = "OR";
 
 //Set default output message.
 $message = "Sorry, no trains were found.";
